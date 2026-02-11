@@ -18,8 +18,17 @@ body {
   flex-direction: column;
   background-color: rgb(8, 214, 241); 
   background-image: url(Images/milad-fakurian-PGdW_bHDbpI-unsplash.jpg);
-
+  
 }
+
+/* nav */
 .navbar-brand a {
 color: rgb(165, 49, 165)
 }
+
+/* main */
+
+main{
+  margin-top: 5%;
+}
+
