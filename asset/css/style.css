@@ -31,4 +31,11 @@ color: rgb(165, 49, 165)
 main{
   margin-top: 5%;
 }
+#question {
+  background-color: blueviolet;
+  color: white;
+  padding: 4rem;
+  font-size: 3rem;
+
+}
 
