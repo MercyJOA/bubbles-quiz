@@ -34,8 +34,10 @@ main{
 #question {
   background-color: blueviolet;
   color: white;
-  padding: 4rem;
-  font-size: 3rem;
+  font-size: 2rem;
 
+}
+#answer-options li{
+  list-style-type: upper-latin;
 }
 
