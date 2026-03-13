@@ -38,18 +38,19 @@
 <!-- main -->
 
 <main>
-   <div class="card w-50 mb-3 mx-auto text-center ">
+   <div class="card w-80 mb-3 mx-auto text-center ">
   <div class="card-body">
-    <h5 class="card-title  w-75 h-25 text-center d-flex justify-content-center" id="question"></h5>
-    <ul class="card-text container text-center row row-cols-3" id="answer-options">
-      <li id="option-1" class="col d-inline"></li>
-      <li id="option-2" class="col d-inline"></li>
-      <li id="option-3" class="col d-inline"></li>
-      <li id="option-4" class="col d-inline"></li>
-    </ul>
+    <h5 class="card-title  p-3 mb-4 text-white rounded " id="question"></h5>
+    <div class="d-grid gap-2 mb-4" id="answer-options">
+      <button id="option-1" class=" btn btn-outline-primary option-btn btn-lg shadow-sm"></button>
+      <button id="option-2" class=" btn btn-outline-primary option-btn btn-lg shadow-sm"></button>
+      <button id="option-3" class=" btn btn-outline-primary option-btn btn-lg shadow-sm"></button>
+      <button id="option-4" class=" btn btn-outline-primary option-btn btn-lg shadow-sm"></button>
+    </div>
+    <div class="d-flex justify-content-between">
     <button type="button" class="btn btn-secondary" id="startButton">Start the quiz</button>
-<button type="button" class="btn btn-primary" id="previousButton">Previous</button>
-    <a href="#" class="btn btn-primary" id="nextButton">Next</a>
+    <button type="button" class="btn btn-primary" id="previousButton">Previous</button>
+    </div>
   </div>
 </div>
 </main>
