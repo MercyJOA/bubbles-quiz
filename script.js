@@ -77,5 +77,7 @@ const options = document.querySelectorAll(".answerButton");
 for(let option of options){
         option.addEventListener("click",handleAnswer);
 }
+quizNextButton.addEventListener("click",handleAnswer)
+ currentQuestionIndex++
 
 loggedQuiz();
