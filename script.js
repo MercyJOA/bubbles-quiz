@@ -1,6 +1,6 @@
 const question = document.querySelector("#question");
 const quizStartButton = document.querySelector("#startButton");
-const quizNextButton = document.querySelector("nextButton");
+const quizNextButton = document.getElementById("nextButton");
 const quizPreviousButton =document.querySelector("previousButton");
 const option1 = document.querySelector("#option-1");
 const option2 = document.querySelector("#option-2");
@@ -39,14 +39,43 @@ const quiz = [
          optionC:"Man",
         correct:"Flower"}
 ];
-let random = Math.floor(Math.random()*quiz.length)
-let currentQuestion = quiz[random];
+let score = 0;
+let currentQuestionIndex = 0;
 
 function loggedQuiz() {
-question.innerText =  currentQuestion.question1;
-option1.innerText = currentQuestion.optionA;
-option2.innerText = currentQuestion.optionB;
-option3.innerText = currentQuestion.correct;
-option4.innerText = currentQuestion.optionA;
+const currentQuestionData = quiz[currentQuestionIndex]
+question.innerText =  currentQuestionData.question1;
+option1.innerText = currentQuestionData.optionA;
+option2.innerText = currentQuestionData.optionB;
+option3.innerText = currentQuestionData.correct;
+option4.innerText = currentQuestionData.optionA;
 }
+
+function handleAnswer(e){
+        const selectedAnswer=e.target.innerText;
+        const correctAnswer=quiz[currentQuestionIndex].correct;
+//check if answer is correct.
+if (selectedAnswer===correctAnswer) {
+        score++;
+        console.log("correct answer!");
+}else{
+        console.log(`wrong! The correct answer is ${correctAnswer.toUpperCase()}`);
+}
+
+currentQuestionIndex++
+
+if (currentQuestionIndex<quiz.length) {
+    loggedQuiz();    
+} else {
+   document.getElementById("quizContainer").innerHTML=`<h2>You Finished!</h2>
+   <p>Your final score is ${score}out of ${quiz.length}</p>
+   <button onclick="location.reload>Restart Quiz</button>`;
+}   
+}
+
+const options = document.querySelectorAll(".answerButton");
+for(let option of options){
+        option.addEventListener("click",handleAnswer);
+}
+
 loggedQuiz();
