@@ -48,7 +48,7 @@ question.innerText =  currentQuestionData.question1;
 option1.innerText = currentQuestionData.optionA;
 option2.innerText = currentQuestionData.optionB;
 option3.innerText = currentQuestionData.correct;
-option4.innerText = currentQuestionData.optionA;
+option4.innerText = currentQuestionData.optionC;
 }
 
 function handleAnswer(e){
