@@ -13,13 +13,12 @@ html {
 
 body {
   min-height: 100vh;
-  min-width: 100vw;
   display: flex;
   flex-direction: column;
-  background-color: rgb(8, 214, 241); 
-  background-image: url(Images/milad-fakurian-PGdW_bHDbpI-unsplash.jpg);
-  
-}
+  align-items: center;
+  justify-content: center;
+  background:linear-gradient(135deg,#667eea 0%,#764ba2 100%) ;
+  }
 
 /* nav */
 .navbar-brand a {
@@ -31,6 +30,13 @@ color: rgb(165, 49, 165)
 main{
   margin-top: 5%;
 }
+.card{
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(10px);
+  border-radius:20px;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
 #question {
   background-color: blueviolet;
   color: white;
@@ -39,5 +45,11 @@ main{
 }
 #answer-options li{
   list-style-type: upper-latin;
+}
+.btn-outline-primary:hover{
+  transform:translateY(-2px);
+  transition: all 0.3s ease;
+  background-color: #5a67d8;
+  color: white;
 }
 
