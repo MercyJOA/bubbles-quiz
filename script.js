@@ -50,7 +50,7 @@ option2.innerText = currentQuestionData.optionB;
 option3.innerText = currentQuestionData.correct;
 option4.innerText = currentQuestionData.optionC;
 }
-
+//listens to the click on the answer buttons.
 function handleAnswer(e){
         const selectedAnswer=e.target.innerText;
         const correctAnswer=quiz[currentQuestionIndex].correct;
@@ -67,9 +67,9 @@ currentQuestionIndex++
 if (currentQuestionIndex<quiz.length) {
     loggedQuiz();    
 } else {
-   document.getElementById("quizContainer").innerHTML=`<h2>You Finished!</h2>
-   <p>Your final score is ${score}out of ${quiz.length}</p>
-   <button onclick="location.reload>Restart Quiz</button>`;
+   document.getElementById("quizContainer").innerHTML=`<h2 style="background-color:green; color:white; padding:1rem; margin:0rem; border:none;">You Finished!</h2>
+   <p style="background-color:green; color: white; padding: 1rem; margin:0rem;border:none;">Your final score is ${score} out of ${quiz.length}</p>
+   <button onclick="location.reload()" style="background-color:white; color:green; padding:1rem; margin:0rem;border:none;font-size:1rem;">Restart Quiz</button>`;
 }   
 }
 
@@ -78,6 +78,8 @@ for(let option of options){
         option.addEventListener("click",handleAnswer);
 }
 quizNextButton.addEventListener("click",handleAnswer)
- currentQuestionIndex++
+ currentQuestionIndex++;
+ quizPreviousButton.addEventListener("click",handleAnswer)
+ currentQuestionIndex--;
 
 loggedQuiz();
