@@ -37,7 +37,7 @@ main{
   justify-content: space-between;
 }
 .card{
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
   border-radius:20px;
   border: none;
@@ -70,4 +70,21 @@ main{
   max-width: 100%;
   width: 100%;
 }
-
+.correct-glow{
+  border: 3px solid #28a745 !important;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% {box-shadow:0 0 0 0 rgba(40, 167, 69, 0.4);}
+  70% {box-shadow:0 0 0 10px rgba(40, 167, 69, 0);}
+  100% {box-shadow:0 0 0 0 rgba(40, 167, 69, 0);}
+}
+.wrong-shake{
+  border: 3px solid #dc3545 !important;
+  animation: shake 0.5s;
+}
+@keyframes shake{
+0%, 100% {transform: translateX(0);}
+25% {transform: translateX(-5px);}
+75% {transform: translateX(5px);}
+}
